@@ -1,0 +1,48 @@
+services:
+
+  # This service stores aggregated quality indicator results submitted
+  # by different data providers.
+  database:
+    build: database
+    restart: unless-stopped
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD_FILE=/run/secrets/database-password
+    secrets:
+      - database-password
+    volumes:
+      - type: volume
+        source: data
+        target: /var/lib/postgresql
+    networks:
+      - database
+
+    ports: # FIXME(moringenj): temporary
+      - 7432:5432
+
+  # This service receives aggregated quality indicator results from
+  # data providers and answers queries for quality indicator results.
+  data-exchange:
+    build: data-exchange
+    restart: unless-stopped
+    env_file: database.env
+    secrets:
+      - database-password
+    networks:
+      - database
+    ports:
+      - 8080:8080
+    depends_on:
+      - database
+
+secrets:
+  database-password:
+    file: database-password
+
+volumes:
+  data:
+    external: no
+
+networks:
+  database:
+    external: no
