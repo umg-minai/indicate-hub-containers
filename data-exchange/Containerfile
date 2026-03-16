@@ -1,5 +1,0 @@
-FROM localhost/indicate-data-exchange-server
-
-COPY --chmod=770 run-data-exchange.sh /app
-
-CMD [ "/app/run-data-exchange.sh" ]
