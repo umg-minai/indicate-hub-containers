@@ -17,7 +17,7 @@ The calorie target is calculated by the insulin requirement and/or phosphate mea
 Regular measurements, at least once per shift and possibly corrective treatments are required.
 The type of treatment differs depending on the type of derangement of blood glucose disorder, and is not included in this quality indicator.'),
        (2_000_100_105,
-        '05 Thrombembolic Prevention',
+        '05 Thromboembolic Prevention',
         'Venous thromboembolism (VTE) is a frequent complication that contributes significantly to morbidity and mortality among critically ill patients.
          Pharmacologic thromboprophylaxis should reduce VTE.'),
        (2_000_100_106,
@@ -30,7 +30,7 @@ The type of treatment differs depending on the type of derangement of blood gluc
 Monitoring/Detection is important for early treatment and enforced by national guidelines regularly, at least once per shift.
 Due to the lack of monitoring devices the assessment of scores is critical.'),
        (2_000_100_108,
-        '08 Advanced Care Planing',
+        '08 Advance Care Plan',
         'Critically ill patients on an intensive care unit or their relatives should be consulted regarding care/treatment plans.'),
        (2_000_100_109,
         '09 Mobilisation',
