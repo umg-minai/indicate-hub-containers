@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     shm_size: 128mb
     environment:
-      POSTGRES_PASSWORD_FILE=/run/secrets/database-password
+      POSTGRES_PASSWORD_FILE: /run/secrets/database-password
     secrets:
       - database-password
     volumes:
@@ -24,7 +24,8 @@ services:
     restart: unless-stopped
     env_file: database.env
     environment:
-      DATABASE_PASSWORD_FILE=/run/secrets/database-password
+      DATABASE_PASSWORD_FILE: /run/secrets/database-password
+      DATA_PROVIDER_COUNT_THRESHOLD: 3
     secrets:
       - database-password
     networks:
