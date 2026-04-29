@@ -20,7 +20,7 @@ services:
   # This service receives aggregated quality indicator results from
   # data providers and answers queries for quality indicator results.
   data-exchange:
-    image: ghcr.io/umg-minai/indicate-data-exchange-server:1.0.0
+    image: ghcr.io/umg-minai/indicate-data-exchange-server:1.1.0
     restart: unless-stopped
     env_file: database.env
     environment:
