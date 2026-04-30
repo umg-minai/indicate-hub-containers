@@ -41,8 +41,8 @@ secrets:
 
 volumes:
   data:
-    external: no
+    external: false
 
 networks:
   database:
-    external: no
+    external: false
